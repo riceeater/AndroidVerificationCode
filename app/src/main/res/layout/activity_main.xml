@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <com.xylitolz.androidverificationcode.view.VerificationCodeView
+        android:id="@+id/view_verification"
+        android:layout_marginTop="20dp"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        app:vcv_code_size="16sp"
+        app:vcv_code_bg_focus="@drawable/bg_text_focused"
+        app:vcv_code_bg_normal="@drawable/bg_text_normal"
+        app:vcv_code_color="@color/text_border_focused"
+        app:vcv_code_number="4"
+        app:vcv_code_width="50dp"/>
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提交"/>
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清空"/>
+</LinearLayout>
