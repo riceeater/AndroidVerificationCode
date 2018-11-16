@@ -13,9 +13,9 @@ emmmmmm，好像截了iOS的图，不要在意这些细节。
 ```xml
 <com.xylitolz.androidverificationcode.view.VerificationCodeView
         android:id="@+id/view_verification"
-        android:layout_marginTop="20dp"
-        android:layout_width="240dp"
+		android:layout_width="240dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         app:vcv_code_size="16sp"
         app:vcv_code_bg_focus="@drawable/bg_text_focused"
         app:vcv_code_bg_normal="@drawable/bg_text_normal"
@@ -32,4 +32,4 @@ emmmmmm，好像截了iOS的图，不要在意这些细节。
 
 
 
-相关博客地址：[Android自定义View-仿滴滴自定义验证码输入框](http://www.riceeater.info/articles/Android/View/VerificationCodeView/)
+相关博客地址：[Android自定义View-仿滴滴自定义验证码输入框](http://www.riceeater.info/articles/Android/View/VerificationCodeView/) 
