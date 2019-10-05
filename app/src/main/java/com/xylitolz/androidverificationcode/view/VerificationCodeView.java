@@ -44,6 +44,8 @@ public class VerificationCodeView extends RelativeLayout {
     private Drawable textDrawable;
     //验证码选中时的背景
     private Drawable textFocusedDrawable;
+    //是否展示密码样式
+    private boolean showPassword = false;
     //验证码之间间隔
     private float dividerWidth = 0;
     //对EditText输入进行监听
@@ -82,6 +84,7 @@ public class VerificationCodeView extends RelativeLayout {
         textSize = array.getDimensionPixelSize(R.styleable.VerificationCodeView_vcv_code_size, getResources().getDimensionPixelOffset(R.dimen.text_size));
         textDrawable = array.getDrawable(R.styleable.VerificationCodeView_vcv_code_bg_normal);
         textFocusedDrawable = array.getDrawable(R.styleable.VerificationCodeView_vcv_code_bg_focus);
+        showPassword = array.getBoolean(R.styleable.VerificationCodeView_vcv_code_input_style, false);
         array.recycle();
         //若未设置选中和未选中状态，设置默认
         if (textDrawable == null) {
@@ -105,15 +108,20 @@ public class VerificationCodeView extends RelativeLayout {
         for (int i = 0; i < codeNum; i++) {
             //循环加入数组中，设置TextView字体大小和颜色，并将TextView依次加入LinearLayout
             TextView textView = new TextView(context);
-            textView.setWidth((int) codeWidth);
-            textView.setHeight((int) codeWidth);
             textView.setGravity(Gravity.CENTER);
             textView.setTextColor(textColor);
             textView.setTextSize(textSize);
+            textView.setIncludeFontPadding(false);
+            if(showPassword) {
+                //数字密码样式，可更改
+                textView.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_VARIATION_PASSWORD);
+            }
             textViews[i] = textView;
             this.addView(textView);
             RelativeLayout.LayoutParams params = (LayoutParams) textView.getLayoutParams();
             params.addRule(CENTER_VERTICAL);
+            params.width = (int) codeWidth;
+            params.height = (int) codeWidth;
         }
         //初始化EditText，设置背景色为透明，获取焦点，设置光标颜色，设置输入类型等
         editText = new WiseEditText(context);
@@ -259,7 +267,9 @@ public class VerificationCodeView extends RelativeLayout {
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
         //获取到宽高，可以对TextView进行摆放
-        layoutTextView();
+        if(dividerWidth == 0) {
+            layoutTextView();
+        }
     }
 
     private float dip2px(float dp, Context context) {

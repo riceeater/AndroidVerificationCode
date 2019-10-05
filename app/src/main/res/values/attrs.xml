@@ -14,5 +14,7 @@
         <attr name="vcv_code_bg_focus" format="reference" />
         <!--输入框没有焦点时边框-->
         <attr name="vcv_code_bg_normal" format="reference" />
+        <!--是否展示密码样式-->
+        <attr name="vcv_code_input_style" format="boolean" />
     </declare-styleable>
 </resources>
