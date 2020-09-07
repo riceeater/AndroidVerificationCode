@@ -1,8 +1,8 @@
 类滴滴验证码输入框，长这样：
 
-![](http://p6z0jdp7l.bkt.clouddn.com/view/didi_verification_screen_shoot.png)
+![](image/自定义View-验证码仿滴滴.gif)
 
-emmmmmm，好像截了iOS的图，不要在意这些细节。
+
 
 ### 实现思路
 
@@ -26,10 +26,8 @@ emmmmmm，好像截了iOS的图，不要在意这些细节。
 
 
 
-### 效果：
-
-![](http://p6z0jdp7l.bkt.clouddn.com/view/verification_code_activity.gif)
+效果参考上图
 
 
 
-相关博客地址：[Android自定义View-仿滴滴自定义验证码输入框](http://www.riceeater.info/articles/Android/View/VerificationCodeView/) 
+相关博客地址：[Android自定义View-仿滴滴自定义验证码输入框](https://riceeater.github.io/articles/Android/View/VerificationCodeView/) 
