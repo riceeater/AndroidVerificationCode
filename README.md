@@ -30,4 +30,4 @@
 
 
 
-相关博客地址：[Android自定义View-仿滴滴自定义验证码输入框](https://riceeater.github.io/articles/Android/View/VerificationCodeView/) 
+相关博客地址：[Android自定义View-仿滴滴自定义验证码输入框](https://riceeater.gitee.io/post/23-VerificationCodeView) 
